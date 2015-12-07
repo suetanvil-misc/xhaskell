@@ -1,31 +1,32 @@
+---
 language: c
 sudo: false
 addons:
   apt:
     sources:
-      - hvr-ghc
+    - hvr-ghc
     packages:
-      - ghc-7.6.3
-      - ghc-7.8.4
-      - ghc-7.10.1
-      - cabal-install-1.22
+    - ghc-7.6.3
+    - ghc-7.8.4
+    - ghc-7.10.1
+    - cabal-install-1.22
 env:
   global:
-    - CABALVER=1.22
+  - CABALVER=1.22
   matrix:
-    - GHCVER=7.6.3
-    - GHCVER=7.8.4
-    - GHCVER=7.10.1
+  - GHCVER=7.6.3
+  - GHCVER=7.8.4
+  - GHCVER=7.10.1
 cache:
   directories:
-    - '$HOME/.ghc'
-    - '$HOME/.cabal'
+  - "$HOME/.ghc"
+  - "$HOME/.cabal"
 before_install:
-  - './_test/bootstrap.sh'
+- "./_test/bootstrap.sh"
 install:
-  - true
+- true
 script:
-  - 'export PATH=/opt/cabal/$CABALVER/bin:/opt/ghc/$GHCVER/bin:$PATH'
-  - 'runhaskell -Wall ./_test/check-exercises.hs'
-  - './bin/fetch-configlet'
-  - './bin/configlet .'
+- export PATH=/opt/cabal/$CABALVER/bin:/opt/ghc/$GHCVER/bin:$PATH
+- runhaskell -Wall ./_test/check-exercises.hs
+- "./bin/fetch-configlet"
+- "./bin/configlet ."
