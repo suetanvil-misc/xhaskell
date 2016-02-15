@@ -1,25 +1,25 @@
 
 Haskell is a purely functional, lazy, statically-typed programming
-language with inferred static typing.
+language with type inference.
 
-"Functional" means that functions are first-class data types.
+**Functional** means that functions are first-class data types.
 
-"Purely Functional" means (roughly) that there are no side effects.
+**Purely Functional** means (roughly) that there are no side effects.
 Every function will always return the same value for a given argument
 will do nothing else.
 
-"Lazy" (a.k.a "non-strict") means that the compiler will put off
+**Lazy** (a.k.a "non-strict") means that the compiler will put off
 evaluating a thing until absolutely neccessary.  This lets you safely
 do wierd stuff like operating on an infinite list--the language will
 only create it up to the last value you actually use.
 
-"Static typing" means that identifiers have a type set at compile time
-like those in Java, C++ or C#; not at run time as like those in
-Python, Ruby or JavaScript.
+**Statically-typed** means that identifiers have a type set at compile
+time--like those in Java, C++ or C#--instead of holding any type like
+those in Python, Ruby or JavaScript.
 
-"Inferred static typing" means static typing but the compiler will
-often figure out the type of an identifier by itself.  Scala and later
-versions of C# both do this.
+**Type inference** means that the compiler will often figure out the
+type of an identifier by itself so you don't have to specify the type
+of an identifier.  Scala and later versions of C# both do this.
 
 Haskell syntax is beautiful and minimal.  For example, here is an
 implemention of quicksort in 6 lines:
