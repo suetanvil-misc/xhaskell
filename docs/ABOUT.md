@@ -14,12 +14,12 @@ do wierd stuff like operating on an infinite list--the language will
 only create it up to the last value you actually use.
 
 **Statically-typed** means that identifiers have a type set at compile
-time--like those in Java, C++ or C#--instead of holding any type like
-those in Python, Ruby or JavaScript.
+time--like those in Java, C++ or C#--instead of holding data of any
+type like those in Python, Ruby or JavaScript.
 
 **Type inference** means that the compiler will often figure out the
-type of an identifier by itself so you don't have to specify the type
-of an identifier.  Scala and later versions of C# both do this.
+type of an identifier by itself so you don't have to specify it.
+Scala and later versions of C# both do this.
 
 Haskell syntax is beautiful and minimal.  For example, here is an
 implemention of quicksort in 6 lines:
@@ -36,5 +36,5 @@ quicksort (x:xs) =
 In addition, Haskell is standardized and has multiple high-quality
 implementations, some of which produce standalone native binaries.
 There is also a collection of free third-party libraries available and
-a package manager (`cabal`) to automatically fetch them for you.
+a package manager ("cabal") to automatically fetch them for you.
 
